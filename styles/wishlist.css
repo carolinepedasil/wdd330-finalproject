@@ -1,0 +1,46 @@
+.wishlist-header {
+  text-align: center;
+  margin: var(--space-xl) 0 var(--space-2xl);
+}
+
+.wishlist-header h2 {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.wishlist-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.wishlist-empty {
+  text-align: center;
+  padding: var(--space-2xl) 0;
+  color: var(--text-secondary);
+}
+
+.wishlist-empty svg {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.5;
+}
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-secondary);
+}
+
+.empty-state svg {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--text);
+}

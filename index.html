@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Explorer - Discover Global Destinations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="/public/icon.png">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <div class="logo">
+              <img src="/public/icon.png" alt="World Explorer" class="logo-icon" />
+              <h1>World Explorer</h1>
+            </div>
+            <nav class="nav">
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <img src="/public/sun.png" alt="Light mode" class="sun-icon" />
+                <img src="/public/moon.webp" alt="Dark mode" class="moon-icon" />
+              </button>
+              <button id="wishlist-btn" class="nav-btn">
+                <img src="/public/heart.png" alt="Wishlist" class="heart-icon" />
+                Wishlist (<span id="wishlist-count">0</span>)
+              </button>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section id="home-page" class="page active">
+          <div class="hero">
+            <div class="container">
+              <div class="hero-content">
+                <h2 class="hero-title">Discover the World</h2>
+                <p class="hero-subtitle">Explore countries, cultures, and destinations from around the globe</p>
+                
+                <div class="search-container">
+                  <div class="search-box">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"/>
+                      <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    <input 
+                      type="text" 
+                      id="country-search" 
+                      placeholder="Search for a country..."
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="filter-buttons">
+                    <button class="filter-btn active" data-region="all">All Regions</button>
+                    <button class="filter-btn" data-region="Africa">Africa</button>
+                    <button class="filter-btn" data-region="Americas">Americas</button>
+                    <button class="filter-btn" data-region="Asia">Asia</button>
+                    <button class="filter-btn" data-region="Europe">Europe</button>
+                    <button class="filter-btn" data-region="Oceania">Oceania</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="loading" id="loading">
+              <div class="spinner"></div>
+              <p>Loading countries...</p>
+            </div>
+            
+            <div class="countries-grid" id="countries-grid"></div>
+          </div>
+        </section>
+
+        <section id="details-page" class="page">
+          <div class="container">
+            <div id="country-details" class="country-details"></div>
+          </div>
+        </section>
+
+        <section id="wishlist-page" class="page">
+          <div class="container">
+            <button id="wishlist-back-btn" class="back-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+              Back to Home
+            </button>
+            
+            <div class="wishlist-header">
+              <h2>My Travel Wishlist</h2>
+              <p>Countries you want to explore</p>
+            </div>
+            
+            <div id="wishlist-container" class="wishlist-container"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "world-explorer",
+  "version": "1.0.0",
+  "description": "A web application for discovering global destinations with detailed information and real-time events",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "^5.0.0"
+  }
+}
