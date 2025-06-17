@@ -1,11 +1,12 @@
 {
   "name": "world-explorer",
   "version": "1.0.0",
-  "description": "A web application for discovering global destinations with detailed information and real-time events",
+  "description": "A web application for discovering global destinations with detailed information",
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host 0.0.0.0 --port $PORT",
+    "start": "vite preview --host 0.0.0.0 --port $PORT"
   },
   "dependencies": {
     "vite": "^5.0.0"
