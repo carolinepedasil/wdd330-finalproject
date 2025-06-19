@@ -312,7 +312,7 @@ class WorldExplorerApp {
         </button>
         
         <button class="btn btn-secondary" id="toggle-wishlist-btn">
-          <img src="public/heart.png" alt="Heart" />
+          <img src="./public/heart.png" alt="Heart" />
           ${isInWishlist ? 'Remove from Wishlist' : 'Add to Wishlist'}
         </button>
       </div>

@@ -8,24 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/png" href="public/icon.png">
+    <link rel="icon" type="image/png" href="./public/icon.png">
   </head>
   <body>
     <div id="app">
+      <!-- Header -->
       <header class="header">
         <div class="container">
           <div class="header-content">
             <div class="logo">
-              <img src="public/icon.png" alt="World Explorer" class="logo-icon" />
+              <img src="./public/icon.png" alt="World Explorer" class="logo-icon" />
               <h1>World Explorer</h1>
             </div>
             <nav class="nav">
               <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                <img src="public/sun.png" alt="Light mode" class="sun-icon" />
-                <img src="public/moon.webp" alt="Dark mode" class="moon-icon" />
+                <img src="./public/sun.png" alt="Light mode" class="sun-icon" />
+                <img src="./public/moon.webp" alt="Dark mode" class="moon-icon" />
               </button>
               <button id="wishlist-btn" class="nav-btn">
-                <img src="public/heart.png" alt="Wishlist" class="heart-icon" />
+                <img src="./public/heart.png" alt="Wishlist" class="heart-icon" />
                 Wishlist (<span id="wishlist-count">0</span>)
               </button>
             </nav>
@@ -33,7 +34,9 @@
         </div>
       </header>
 
+      <!-- Main Content -->
       <main class="main">
+        <!-- Home Page -->
         <section id="home-page" class="page active">
           <div class="hero">
             <div class="container">
@@ -77,12 +80,14 @@
           </div>
         </section>
 
+        <!-- Country Details Page -->
         <section id="details-page" class="page">
           <div class="container">
             <div id="country-details" class="country-details"></div>
           </div>
         </section>
 
+        <!-- Wishlist Page -->
         <section id="wishlist-page" class="page">
           <div class="container">
             <button id="wishlist-back-btn" class="back-btn">
